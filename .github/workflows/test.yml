@@ -1,0 +1,13 @@
+name: learn github actions
+
+on : push
+
+jobs:
+  learn-github-actions-job:
+
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name : checkout repository code
+        uses: actions/checkout@v4
+      - run: echo "$(cat hello_world.txt)"
